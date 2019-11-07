@@ -1,0 +1,14 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'cfn-modules test'
+Parameters:
+  AliasName:
+    Type: String
+Resources:
+  Key:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      Parameters:
+        AdminAccess: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+        AliasName: !Ref AliasName
+      TemplateURL: './node_modules/@cfn-modules/kms-key-strict/module.yml'

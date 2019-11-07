@@ -1,0 +1,21 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'cfn-modules test'
+Resources:
+  Role:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service: 'ec2.amazonaws.com'
+          Action: 'sts:AssumeRole'
+  Key:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      Parameters:
+        AdminAccess: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+        UseAccess: !GetAtt 'Role.Arn'
+      TemplateURL: './node_modules/@cfn-modules/kms-key-strict/module.yml'
