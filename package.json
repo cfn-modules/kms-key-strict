@@ -1,0 +1,16 @@
+{
+  "name": "@cfn-modules/kms-key-strict",
+  "version": "1.0.0",
+  "description": "AWS KMS key with strict access restrictions",
+  "author": "Michael Wittig <michael@widdix.de>",
+  "license": "Apache-2.0",
+  "keywords": ["cfn-modules", "cfn-modules:ExposeArn", "cfn-modules:LambdaDependency"],
+  "homepage": "https://github.com/cfn-modules",
+  "bugs": {
+    "url": "https://github.com/cfn-modules/kms-key-strict/issues"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/cfn-modules/kms-key-strict.git"
+  }
+}

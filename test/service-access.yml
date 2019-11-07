@@ -1,0 +1,14 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'cfn-modules test'
+Parameters:
+  ServiceAccess:
+    Type: String
+Resources:
+  Key:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      Parameters:Parameters:
+        AdminAccess: !Sub 'arn:aws:iam::${AWS::AccountId}:role/WiddixAdmin'
+        ServiceAccess: !Ref ServiceAccess
+      TemplateURL: './node_modules/@cfn-modules/kms-key-strict/module.yml'
