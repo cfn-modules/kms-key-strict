@@ -29,8 +29,8 @@ Resources:
     Properties:
       Parameters:
         AlertingModule: !GetAtt 'Alerting.Outputs.StackName' # optional
-        AdminAccess: !Sub 'arn:aws:iam::${AWS::AccountId:role/ROLE_NAME' # required
-        UseAccess: !Sub 'arn:aws:iam::${AWS::AccountId:role/ROLE_NAME' # optional
+        AdminAccess: !Sub 'arn:aws:iam::${AWS::AccountId}:role/ROLE_NAME' # required
+        UseAccess: !Sub 'arn:aws:iam::${AWS::AccountId}:role/ROLE_NAME' # optional
         ServiceAccess: 'NO_SERVICES' # optional
         AliasName: '' # optional
       TemplateURL: './node_modules/@cfn-modules/kms-key-strict/module.yml'
