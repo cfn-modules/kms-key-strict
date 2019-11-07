@@ -8,7 +8,7 @@ Resources:
   Key:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
-      Parameters:Parameters:
+      Parameters:
         AdminAccess: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
         ServiceAccess: !Ref ServiceAccess
       TemplateURL: './node_modules/@cfn-modules/kms-key-strict/module.yml'
