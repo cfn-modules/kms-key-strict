@@ -23,10 +23,10 @@ test.serial('all', async t => {
   }
 });
 
-test.serial('ebs', async t => {
+test.serial('ec2', async t => {
   const stackName = cfntest.stackName();
   try {
-    t.log(await cfntest.createStack(`${__dirname}/service-access.yml`, stackName, {ServiceAccess: 'ebs'}));
+    t.log(await cfntest.createStack(`${__dirname}/service-access.yml`, stackName, {ServiceAccess: 'ec2'}));
     // what could we test here?
   } finally {
     t.log(await cfntest.deleteStack(stackName));
