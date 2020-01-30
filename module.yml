@@ -45,12 +45,14 @@ Conditions:
 Resources:
   Alias:
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Type: 'AWS::KMS::Alias'
     Properties:
       AliasName: !If [HasAliasName, !Sub 'alias/${AliasName}', !Sub 'alias/${AWS::StackName}']
       TargetKeyId: !Ref Key
   Key:
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Type: 'AWS::KMS::Key'
     Properties:
       KeyPolicy:
@@ -132,7 +134,7 @@ Outputs:
   ModuleId:
     Value: 'kms-key-strict'
   ModuleVersion:
-    Value: '0.1.0'
+    Value: '0.1.1'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
