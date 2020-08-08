@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/cfn-modules/kms-key-strict.svg?branch=master)](https://travis-ci.org/cfn-modules/kms-key-strict)
-[![NPM version](https://img.shields.io/npm/v/@cfn-modules/kms-key-strict.svg)](https://www.npmjs.com/package/@cfn-modules/kms-key-strict)
-
 # cfn-modules: AWS KMS key (strict)
 
 AWS KMS key with strict access restrictions.
