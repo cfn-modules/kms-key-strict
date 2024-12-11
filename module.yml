@@ -134,7 +134,7 @@ Outputs:
   ModuleId:
     Value: 'kms-key-strict'
   ModuleVersion:
-    Value: '0.2.0'
+    Value: '0.2.1'
   StackName:
     Value: !Ref 'AWS::StackName'
   Arn:
