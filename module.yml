@@ -108,7 +108,7 @@ Resources:
               StringEquals:
                 'kms:CallerAccount': !Ref 'AWS::AccountId'
               StringLike:
-                'kms:ViaService': !If [HasServiceAccessAllServices, '*.${AWS::Region}.amazonaws.com', !Sub '${ServiceAccess}.${AWS::Region}.amazonaws.com']
+                'kms:ViaService': !If [HasServiceAccessAllServices, !Sub '*.${AWS::Region}.amazonaws.com', !Sub '${ServiceAccess}.${AWS::Region}.amazonaws.com']
   Rule:
     Condition: HasAlertingModule
     Type: 'AWS::Events::Rule'
